@@ -66,7 +66,7 @@
     const bubble = document.createElement("div");
     bubble.id = "research-agent-bubble";
     bubble.innerText = "🔍";
-    bubble.title = "Open AI Research Agent";
+    bubble.title = "Open AI Research Radar";
     bubble.onclick = () => {
       bubble.style.display = "none";
       onExpand();
@@ -103,7 +103,7 @@
 
     // Header
     const header = document.createElement("div");
-    header.innerText = "🔍 AI Research Agent";
+    header.innerText = "🔍 AI Research Radar";
     Object.assign(header.style, {
       background: "#2e7d32",
       color: "white",
@@ -382,7 +382,7 @@
       output.innerHTML = renderMarkdown(data.analysis);
 
     } catch (err) {
-      console.error("Research Agent error:", err);
+      console.error("Research Radar error:", err);
       setStatus(statusDot, statusText, "Backend not running", "error");
       output.innerText = "❌ Cannot connect to backend.\n\nStart your FastAPI server:\n\n  cd AI_Agent\n  uvicorn main:app --reload\n\nThen click 🔄 Retry.";
     }

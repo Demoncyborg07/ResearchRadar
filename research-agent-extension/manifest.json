@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Research Agent",
+  "name": "Research Radar",
   "version": "4.0",
 
   "background": {
@@ -22,7 +22,7 @@
 
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Research Agent"
+    "default_title": "Research Radar"
   },
 
   "content_scripts": [
