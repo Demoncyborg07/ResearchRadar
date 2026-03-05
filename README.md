@@ -1,4 +1,4 @@
-# AI Research Agent
+# AI Research Radar
 
 A browser extension + FastAPI backend that automatically analyzes research papers and PDF documents using AI. Point it at an arXiv page or any PDF and get a structured, readable summary in seconds.
 
