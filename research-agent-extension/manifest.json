@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Research Agent",
+  "version": "4.0",
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "https://arxiv.org/*",
+    "*://*/*.pdf",
+    "file:///*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Research Agent"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://arxiv.org/abs/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pdf.mjs",
+        "pdf.worker.mjs",
+        "pdf_panel.js",
+        "popup.html",
+        "popup.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
